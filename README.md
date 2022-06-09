@@ -18,3 +18,8 @@
 - bioinfo_11.py：事後デコーディング(各位置で事後状態確率が最も高い状態を選択する方法)とviterbiアルゴリズムの精度比較
 - bioinfo_12.py:Baum-Welchアルゴリズムでパラメタを推定した後にbioinfo_11.pyと同様の操作を行う
  
+## 研究活動
+自然言語処理モデルBERTにタンパク質で事前学習させたモデル([ProtBert-BFD](https://huggingface.co/Rostlab/prot_bert_bfd)に分類器(BERTの文章分類ライブラリ[BertForSequenceClassification](https://huggingface.co/docs/transformers/model_doc/bert#transformers.BertForSequenceClassification)を接続させ，抗生物質耐性の原因となるタンパク質でファインチューニングしたモデル
+- tokenizer_bert.py:入力配列をトークン化
+- level0.py:入力タンパク質が耐性を持つor持たないの２クラス分類
+- level1.py:耐性を与えるタンパク質について，そのメカニズムを６クラス分類
